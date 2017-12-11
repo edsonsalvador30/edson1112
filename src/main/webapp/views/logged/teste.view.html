@@ -1,0 +1,150 @@
+<h3>teste</h3> 
+<!-- div row para pesquisa --> 
+<!--<div class="row">--> 
+<div ng-hide="teste.inserting || teste.editing" class="component-holder ng-binding ng-scope" data-component="crn-datasource-filter-complex"> 
+  <fieldset> 
+    <div data-component="crn-datasource-filter" id="crn-datasource-filter-attribute_01" class="col-md-2"> 
+      <div class="form-group"> 
+        <label for="textinput-filter" class="">{{"template.crud.search" | translate}} Attribute_01</label> 
+        <input type="text" ng-model="vars.search_attribute_01" mask="" mask-placeholder="" cronapp-filter="attribute_01" cronapp-filter-autopost="false" cronapp-filter-operator="" crn-datasource="teste" class="form-control" value="" placeholder="Attribute_01"> 
+      </div> 
+    </div> 
+    <div data-component="crn-datasource-filter" id="crn-datasource-filter-attribute_03" class="col-md-2"> 
+      <div class="form-group"> 
+        <label for="textinput-filter" class="">{{"template.crud.search" | translate}} Attribute_03</label> 
+        <input type="text" ng-model="vars.search_attribute_03" mask="" mask-placeholder="" cronapp-filter="attribute_03" cronapp-filter-autopost="false" cronapp-filter-operator="" crn-datasource="teste" class="form-control" value="" placeholder="Attribute_03"> 
+      </div> 
+    </div> 
+    <div data-component="crn-datasource-filter" id="crn-datasource-filter-email" class="col-md-2"> 
+      <div class="form-group"> 
+        <label for="textinput-filter" class="">{{"template.crud.search" | translate}} Email</label> 
+        <input type="text" ng-model="vars.search_email" mask="*@*.com" mask-placeholder="" cronapp-filter="email" cronapp-filter-autopost="false" cronapp-filter-operator="" crn-datasource="teste" class="form-control" value="" placeholder="Email"> 
+      </div> 
+    </div> 
+    <div data-component="crn-button-filter" class="col-md-12" crn-datasource="teste"> 
+      <button class="btn btn-default component-holder" cronapp-filter="" type="submit" ng-click="" xattr-size="" xattr-fullsize="" xattr-theme="btn-default"><i class="glyphicon glyphicon-search"></i> <span>{{"template.crud.search" | translate}}</span></button> 
+    </div> 
+    <br class="col-md-12"> 
+  </fieldset> 
+</div> 
+<br> 
+<div data-component="crn-button" id="crn-button-564202" class=""> 
+  <button class="btn btn-primary" type="submit" onclick="" ng-click="teste.startInserting()" ng-hide="teste.inserting || teste.editing"><i class="fa fa-user"></i> <span class="">{{"template.crud.new" | translate}}</span></button> 
+</div> 
+<!-- fim div row para pesquisa --> 
+<!--</div>--> 
+<datasource filter="" name="teste" entity="api/cronapi/crud/app.entity.teste" keys="id" rows-per-page="100" delete-message="Deseja remover?" class=""></datasource> 
+<div class="component-holder" data-component="crn-grid" id="crn-grid-teste"> 
+  <div crn-datasource="teste" class="" ng-hide="teste.editing || teste.inserting"> 
+    <table class="table  table-bordered table-hover table-striped"> 
+      <thead> 
+        <tr class="table-header"> 
+          <th class=""> 
+            <div class="">
+              Attribute_01
+            </div> </th> 
+          <th class=""> 
+            <div class="">
+              Attribute_03
+            </div> </th> 
+          <th class=""> 
+            <div class="">
+              Email
+            </div> </th> 
+          <th class=""> 
+            <div class="">
+              {{"template.crud.actions" | translate}}
+            </div> </th> 
+        </tr> 
+      </thead> 
+      <tbody> 
+        <tr class="table-content" ng-repeat="rowData in datasource.data"> 
+          <td class=""> 
+            <div class="">
+               {{rowData.attribute_01 }} 
+            </div> </td> 
+          <td class=""> 
+            <div class="">
+               {{rowData.attribute_03 }} 
+            </div> </td> 
+          <td class=""> 
+            <div class="">
+               {{rowData.email | mask:'*@*.com' }} 
+            </div> </td> 
+          <td class=""> 
+            <div class=""> 
+              <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.startEditing(rowData)"><i class="fa fa-edit"></i></button> 
+              <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.remove(rowData)"><i class="fa fa-times"></i></button> 
+            </div> </td> 
+        </tr> 
+      </tbody> 
+    </table> 
+    <div class="table-footer-controls"> 
+      <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">{{"template.crud.load_more" | translate}}...</button> 
+    </div> 
+  </div> 
+</div> 
+<div data-component="crn-form" id="crn-form-form-teste"> 
+  <div class="form" ng-show="teste.editing || teste.inserting"> 
+    <form crn-datasource="teste" class=""> 
+      <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting"> 
+        <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.startInserting()"><i class="glyphicon glyphicon-plus-sign"></i></button> 
+        <button class="btn btn-success" data-component="crn-button" ng-click="datasource.startEditing()"><i class="glyphicon glyphicon-edit"></i></button> 
+        <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasPrevious()" ng-click="datasource.previous()"><i class="glyphicon glyphicon-chevron-left"></i></button> 
+        <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasNext()" ng-click="datasource.next()"><i class="glyphicon glyphicon-chevron-right"></i></button> 
+        <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.remove()"><i class="glyphicon glyphicon-trash"></i></button> 
+      </div> 
+      <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting"> 
+        <button class="btn btn-success" data-component="crn-button" ng-click="datasource.post()"><i class="glyphicon glyphicon-ok"></i></button> 
+        <button class="btn btn-danger" data-component="crn-button" ng-click="datasource.cancel()"><i class="glyphicon glyphicon-remove"></i></button> 
+      </div> 
+      <br> 
+      <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting"> 
+        <div data-component="crn-textinput" id="crn-textinput-attribute_01" class=""> 
+          <div class="form-group"> 
+            <label for="textinput-attribute_01" class="">Attribute_01</label> 
+            <!-- else for if !model.hasCronappFramework() --> 
+            <input type="text" ng-model="teste.active.attribute_01" class="form-control" id="textinput-attribute_01" placeholder="Attribute_01" mask="" mask-placeholder="" ng-required="false"> 
+            <!-- end if !model.hasCronappFramework() --> 
+          </div> 
+        </div> 
+        <div data-component="crn-dynamic-image" id="crn-textinput-img" class=""> 
+          <div class="form-group"> 
+            <label for="textinput-img" class="">Img</label> 
+            <!-- else for if !model.hasCronappFramework() --> 
+            <div dynamic-image="" ng-model="teste.active.img" class="dynamic-image-container" ng-required="false">
+               {{"template.crud.clickOrDragAnImage" | translate}} 
+            </div> 
+            <!-- end if !model.hasCronappFramework() --> 
+          </div> 
+        </div> 
+        <div data-component="crn-textinput" id="crn-textinput-attribute_03" class=""> 
+          <div class="form-group"> 
+            <label for="textinput-attribute_03" class="">Attribute_03</label> 
+            <!-- else for if !model.hasCronappFramework() --> 
+            <input type="text" ng-model="teste.active.attribute_03" class="form-control" id="textinput-attribute_03" placeholder="Attribute_03" mask="" mask-placeholder="" ng-required="false"> 
+            <!-- end if !model.hasCronappFramework() --> 
+          </div> 
+        </div> 
+        <div data-component="crn-textinput" id="crn-textinput-email" class=""> 
+          <div class="form-group"> 
+            <label for="textinput-email" class="">Email</label> 
+            <!-- else for if !model.hasCronappFramework() --> 
+            <input type="email" ng-model="teste.active.email" class="form-control" id="textinput-email" placeholder="Email" mask="" mask-placeholder="" ng-required="false"> 
+            <!-- end if !model.hasCronappFramework() --> 
+          </div> 
+        </div> 
+        <!-- NtoN  --> 
+        <!-- NtoN  end--> 
+      </fieldset> 
+    </form> 
+    <form> 
+      <fieldset> 
+        <!-- OneToN --> 
+        <!-- OneToOne  end --> 
+      </fieldset> 
+    </form> 
+  </div> 
+</div> 
+<!-- OneToOne modal --> 
+<!-- OneToOne modal end-->

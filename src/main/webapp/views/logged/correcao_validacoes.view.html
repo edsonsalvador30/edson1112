@@ -1,0 +1,154 @@
+<h3>Correcao_validacoes</h3>
+
+<!-- div row para pesquisa -->
+<!--<div class="row">-->
+
+            <div ng-hide="Correcao_validacoes.inserting || Correcao_validacoes.editing" class="component-holder ng-binding ng-scope" data-component="crn-datasource-filter-complex">
+              <fieldset>
+                <div data-component="crn-datasource-filter" id="crn-datasource-filter-cpf" class="col-md-2">
+                    <div class="form-group">
+                        <label for="textinput-filter" class="">{{"template.crud.search" | translate}} CPF</label>
+                        <input type="text" ng-model="vars.search_cpf" mask="999.999.999-99;0" mask-placeholder="" cronapp-filter="cpf" cronapp-filter-autopost="false" cronapp-filter-operator="" crn-datasource="Correcao_validacoes" class="form-control" value="" placeholder="CPF">
+                    </div>
+                </div>
+                <div data-component="crn-datasource-filter" id="crn-datasource-filter-cnpj" class="col-md-2">
+                    <div class="form-group">
+                        <label for="textinput-filter" class="">{{"template.crud.search" | translate}} CNPJ</label>
+                        <input type="text" ng-model="vars.search_cnpj" mask="99.999.999/9999-99;0" mask-placeholder="" cronapp-filter="cnpj" cronapp-filter-autopost="false" cronapp-filter-operator="" crn-datasource="Correcao_validacoes" class="form-control" value="" placeholder="CNPJ">
+                    </div>
+                </div>
+                <div data-component="crn-datasource-filter" id="crn-datasource-filter-custo_total" class="col-md-2">
+                    <div class="form-group">
+                        <label for="textinput-filter" class="">Custo inicial</label>
+                        <input type="number" ng-model="vars.search_custo_total" mask="" mask-placeholder="" cronapp-filter="custo_total" cronapp-filter-autopost="false" cronapp-filter-operator=">=" crn-datasource="Correcao_validacoes" class="form-control" value="" placeholder="Custo Total">
+                    </div>
+                </div><div data-component="crn-datasource-filter" id="crn-datasource-filter-custo_total" class="col-md-2">
+                    <div class="form-group">
+                        <label for="textinput-filter" class="">Custo Final</label>
+                        <input type="number" ng-model="vars.search_custo_total2" mask="" mask-placeholder="" cronapp-filter="custo_total" cronapp-filter-autopost="false" cronapp-filter-operator="<=" crn-datasource="Correcao_validacoes" class="form-control" value="" placeholder="Custo Total">
+                    </div>
+                </div>
+              <div data-component="crn-button-filter" class="col-md-5 genClass7761" crn-datasource="Correcao_validacoes">
+                <button class="btn btn-default component-holder genClass3289" cronapp-filter="" type="submit" ng-click="" xattr-size="" xattr-fullsize="" xattr-theme="btn-default"><i class="glyphicon glyphicon-search"></i> <span>{{"template.crud.search" | translate}}</span></button>
+              </div>
+              <br class="col-md-12">
+              <br class="col-md-12">
+              </fieldset>
+            </div> <br>
+
+<div data-component="crn-button" id="crn-button-564202" class="">
+    <button class="btn btn-primary" type="submit" onclick="" ng-click="Correcao_validacoes.startInserting()" ng-hide="Correcao_validacoes.inserting || Correcao_validacoes.editing"><i class="fa fa-user"></i> <span class="">{{"template.crud.new" | translate}}</span></button>
+</div>
+<!-- fim div row para pesquisa -->
+<!--</div>-->
+
+<datasource filter="" name="Correcao_validacoes" entity="api/cronapi/crud/app.entity.Correcao_validacoes" keys="id" rows-per-page="100" delete-message="Deseja remover?" class=""></datasource>
+<div class="component-holder" data-component="crn-grid" id="crn-grid-Correcao_validacoes">
+    <div crn-datasource="Correcao_validacoes" class="" ng-hide="Correcao_validacoes.editing || Correcao_validacoes.inserting">
+        <table class="table  table-bordered table-hover table-striped">
+            <thead>
+            <tr class="table-header">
+                <th class="">
+                    <div class="">CPF</div>
+                </th>
+                <th class="">
+                    <div class="">CNPJ</div>
+                </th>
+                <th class="">
+                    <div class="">Custo Total</div>
+                </th>
+                <th class="">
+                    <div class="">{{"template.crud.actions" | translate}}</div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="table-content" ng-repeat="rowData in datasource.data">
+                <td class="">
+                    <div class="">
+                                {{rowData.cpf | mask:'999.999.999-99;0' }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.cnpj | mask:'99.999.999/9999-99;0' }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.custo_total  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                        <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.startEditing(rowData)"><i class="fa fa-edit"></i></button>
+                        <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.remove(rowData)"><i class="fa fa-times"></i></button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="table-footer-controls">
+            <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">{{"template.crud.load_more" | translate}}...</button>
+        </div>
+    </div>
+</div>
+<div data-component="crn-form" id="crn-form-form-Correcao_validacoes">
+    <div class="form" ng-show="Correcao_validacoes.editing || Correcao_validacoes.inserting">
+        <form crn-datasource="Correcao_validacoes" class="">
+            <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting">
+                <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.startInserting()"><i class="glyphicon glyphicon-plus-sign"></i></button>
+                <button class="btn btn-success" data-component="crn-button" ng-click="datasource.startEditing()"><i class="glyphicon glyphicon-edit"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasPrevious()" ng-click="datasource.previous()"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasNext()" ng-click="datasource.next()"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.remove()"><i class="glyphicon glyphicon-trash"></i></button>
+            </div>
+            <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
+                <button class="btn btn-success" data-component="crn-button" ng-click="datasource.post()"><i class="glyphicon glyphicon-ok"></i></button>
+                <button class="btn btn-danger" data-component="crn-button" ng-click="datasource.cancel()"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+            <br>
+            <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
+
+                <div data-component="crn-textinput" id="crn-textinput-cpf" class="">
+                    <div class="form-group">
+                        <label for="textinput-cpf" class="">CPF</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="text" ng-model="Correcao_validacoes.active.cpf" class="form-control" id="textinput-cpf" placeholder="CPF" mask="999.999.999-99;0" mask-placeholder="" valid="cpf" data-error-message="{{'invalid.cpf' | translate}}" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-cnpj" class="">
+                    <div class="form-group">
+                        <label for="textinput-cnpj" class="">CNPJ</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="text" ng-model="Correcao_validacoes.active.cnpj" class="form-control" id="textinput-cnpj" placeholder="CNPJ" mask="99.999.999/9999-99;0" mask-placeholder="" valid="cnpj" data-error-message="{{'invalid.cnpj' | translate}}" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-custo_total" class="">
+                    <div class="form-group">
+                        <label for="textinput-custo_total" class="">Custo Total</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="number" ng-model="Correcao_validacoes.active.custo_total" class="form-control" id="textinput-custo_total" placeholder="Custo Total" mask="" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+                <!-- NtoN  -->
+                <!-- NtoN  end-->
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <!-- OneToN -->
+                <!-- OneToOne  end -->
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+
+<!-- OneToOne modal -->
+<!-- OneToOne modal end-->

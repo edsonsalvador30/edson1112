@@ -1,0 +1,350 @@
+<h3>validacoes</h3>
+
+<!-- div row para pesquisa -->
+<!--<div class="row">-->
+
+            <div ng-hide="validacoes.inserting || validacoes.editing" class="component-holder ng-binding ng-scope" data-component="crn-datasource-filter-complex">
+              <fieldset>
+                <div data-component="crn-datasource-filter" id="crn-datasource-filter-attribute_01" class="col-sm-2 col-md-2 col-lg-2">
+                    <div class="form-group">
+                        <label for="textinput-filter" class="">Attribute_01</label>
+                        <input type="time" ng-model="vars.search_attribute_01" mask="HH:mm" mask-placeholder="" cronapp-filter="attribute_01" cronapp-filter-autopost="false" cronapp-filter-operator="" crn-datasource="validacoes" class="form-control" value="" placeholder="Attribute_01">
+                    </div>
+                </div>
+                <div data-component="crn-datasource-filter" id="crn-datasource-filter-attribute_02" class="col-sm-2 col-md-2 col-lg-2">
+                    <div class="form-group">
+                        <label for="textinput-filter" class="">Attribute_02</label>
+                        <input type="datetime" ng-model="vars.search_attribute_02" mask="DD/MM/YYYY HH:mm:ss" mask-placeholder="" cronapp-filter="attribute_02" cronapp-filter-autopost="false" cronapp-filter-operator=">=" crn-datasource="validacoes" class="form-control" value="" placeholder="Attribute_02">
+                    </div>
+                </div><div data-component="crn-datasource-filter" id="crn-datasource-filter-attribute_02" class="col-sm-2 col-md-2 col-lg-2">
+                    <div class="form-group">
+                        <label for="textinput-filter" class="">Attribute_02</label>
+                        <input type="datetime" ng-model="vars.search_attribute_02alt" mask="DD/MM/YYYY HH:mm:ss" mask-placeholder="" cronapp-filter="attribute_02" cronapp-filter-autopost="false" cronapp-filter-operator="<=" crn-datasource="validacoes" class="form-control" value="" placeholder="Attribute_02">
+                    </div>
+                </div>
+                <div data-component="crn-datasource-filter" id="crn-datasource-filter-attribute_03" class="col-sm-2 col-md-2 col-lg-2">
+                    <div class="form-group">
+                        <label for="textinput-filter" class="">Attribute_03</label>
+                        <input type="date" ng-model="vars.search_attribute_03" mask="DD/MM/YYYY" mask-placeholder="" cronapp-filter="attribute_03" cronapp-filter-autopost="false" cronapp-filter-operator="" crn-datasource="validacoes" class="form-control" value="" placeholder="Attribute_03">
+                    </div>
+                </div>
+                <div data-component="crn-datasource-filter" id="crn-datasource-filter-double_sem_mask" class="col-md-2 col-sm-2 col-lg-2">
+                    <div class="form-group">
+                        <label for="textinput-filter" class="">Double _sem _mask</label>
+                        <input type="number" ng-model="vars.search_double_sem_mask" mask="" mask-placeholder="" cronapp-filter="double_sem_mask" cronapp-filter-autopost="false" cronapp-filter-operator="" crn-datasource="validacoes" class="form-control" value="" placeholder="Double _sem _mask">
+                    </div>
+                </div>
+                <div data-component="crn-datasource-filter" id="crn-datasource-filter-doublemask" class="col-sm-2 col-md-2 col-lg-2">
+                    <div class="form-group">
+                        <label for="textinput-filter" class="">Doublemask</label>
+                        <input type="number" ng-model="vars.search_doublemask" mask="#.##0,00;0" mask-placeholder="" cronapp-filter="doublemask" cronapp-filter-autopost="false" cronapp-filter-operator="" crn-datasource="validacoes" class="form-control" value="" placeholder="Doublemask">
+                    </div>
+                </div>
+                <div data-component="crn-datasource-filter" id="crn-datasource-filter-cpf" class="col-lg-2 col-md-2 col-sm-2">
+                    <div class="form-group">
+                        <label for="textinput-filter" class="">CPF</label>
+                        <input type="text" ng-model="vars.search_cpf" mask="999.999.999-99;0" mask-placeholder="" cronapp-filter="cpf" cronapp-filter-autopost="false" cronapp-filter-operator="" crn-datasource="validacoes" class="form-control" value="" placeholder="CPF">
+                    </div>
+                </div>
+                <div data-component="crn-datasource-filter" id="crn-datasource-filter-cnpj" class="col-lg-2 col-md-2 col-sm-2">
+                    <div class="form-group">
+                        <label for="textinput-filter" class="">CNPJ</label>
+                        <input type="text" ng-model="vars.search_cnpj" mask="99.999.999/9999-99;0" mask-placeholder="" cronapp-filter="cnpj" cronapp-filter-autopost="false" cronapp-filter-operator="" crn-datasource="validacoes" class="form-control" value="" placeholder="CNPJ">
+                    </div>
+                </div>
+                <div data-component="crn-datasource-filter" id="crn-datasource-filter-cep" class="col-lg-2 col-md-2 col-sm-2">
+                    <div class="form-group">
+                        <label for="textinput-filter" class="">CEP</label>
+                        <input type="text" ng-model="vars.search_cep" mask="99999-999;0" mask-placeholder="" cronapp-filter="cep" cronapp-filter-autopost="false" cronapp-filter-operator="" crn-datasource="validacoes" class="form-control" value="" placeholder="CEP">
+                    </div>
+                </div>
+                <div data-component="crn-datasource-filter" id="crn-datasource-filter-celular" class="col-lg-2 col-md-2 col-sm-2">
+                    <div class="form-group">
+                        <label for="textinput-filter" class="">Celular</label>
+                        <input type="text" ng-model="vars.search_celular" mask="(99) 99999-9999;0" mask-placeholder="" cronapp-filter="celular" cronapp-filter-autopost="false" cronapp-filter-operator="" crn-datasource="validacoes" class="form-control" value="" placeholder="Celular">
+                    </div>
+                </div>
+                <div data-component="crn-datasource-filter" id="crn-datasource-filter-telefone" class="col-sm-3 col-md-3  col-lg-2">
+                    <div class="form-group">
+                        <label for="textinput-filter" class="">Telefone</label>
+                        <input type="text" ng-model="vars.search_telefone" mask="(99) 9999-9999;0" mask-placeholder="" cronapp-filter="telefone" cronapp-filter-autopost="false" cronapp-filter-operator="" crn-datasource="validacoes" class="form-control" value="" placeholder="Telefone">
+                    </div>
+                </div>
+              <div data-component="crn-button-filter" class="col-lg-12 col-sm-12 col-md-5" crn-datasource="validacoes">
+                <button class="btn btn-default component-holder" cronapp-filter="" type="submit" ng-click="" xattr-size="" xattr-fullsize="" xattr-theme="btn-default"><i class="glyphicon glyphicon-search"></i> <span>{{"template.crud.search" | translate}}</span></button>
+              </div>
+              <br class="col-md-12">
+              <br class="col-lg-12 col-md-12 col-sm-12">
+              </fieldset>
+            </div>
+            <br>
+
+<div data-component="crn-button" id="crn-button-564202" class="">
+    <button class="btn btn-primary" type="submit" onclick="" ng-click="validacoes.startInserting()" ng-hide="validacoes.inserting || validacoes.editing"><i class="fa fa-user"></i> <span class="">{{"template.crud.new" | translate}}</span></button>
+</div>
+<!-- fim div row para pesquisa -->
+<!--</div>-->
+
+<datasource filter="" name="validacoes" entity="api/cronapi/crud/app.entity.validacoes" keys="id" rows-per-page="100" delete-message="Deseja remover?" class=""></datasource>
+<div class="component-holder" data-component="crn-grid" id="crn-grid-validacoes">
+    <div crn-datasource="validacoes" class="" ng-hide="validacoes.editing || validacoes.inserting">
+        <table class="table  table-bordered table-hover table-striped">
+            <thead>
+            <tr class="table-header">
+                <th class="">
+                    <div class="">Attribute_01</div>
+                </th>
+                <th class="">
+                    <div class="">Attribute_02</div>
+                </th>
+                <th class="">
+                    <div class="">Attribute_03</div>
+                </th>
+                <th class="">
+                    <div class="">Double _sem _mask</div>
+                </th>
+                <th class="">
+                    <div class="">Doublemask</div>
+                </th>
+                <th class="">
+                    <div class="">CPF</div>
+                </th>
+                <th class="">
+                    <div class="">CNPJ</div>
+                </th>
+                <th class="">
+                    <div class="">CEP</div>
+                </th>
+                <th class="">
+                    <div class="">Celular</div>
+                </th>
+                <th class="">
+                    <div class="">Telefone</div>
+                </th>
+                <th class="">
+                    <div class="">Valor</div>
+                </th>
+                <th class="">
+                    <div class="">Valor 2</div>
+                </th>
+                <th class="">
+                    <div class="">{{"template.crud.actions" | translate}}</div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="table-content" ng-repeat="rowData in datasource.data">
+                <td class="">
+                    <div class="">
+                                {{rowData.attribute_01 | mask:'time'}}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.attribute_02 | mask:'datetime'}}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.attribute_03 | mask:'date'}}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.double_sem_mask  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.doublemask | mask:'#.##0,00;0' }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.cpf | mask:'999.999.999-99;0' }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.cnpj | mask:'99.999.999/9999-99;0' }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.cep | mask:'99999-999;0' }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.celular | mask:'(99) 99999-9999;0' }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.telefone | mask:'(99) 9999-9999;0' }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.valor | mask:'##0,00;0' }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.valor2 | mask:'##0,00;0' }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                        <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.startEditing(rowData)"><i class="fa fa-edit"></i></button>
+                        <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.remove(rowData)"><i class="fa fa-times"></i></button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="table-footer-controls">
+            <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">{{"template.crud.load_more" | translate}}...</button>
+        </div>
+    </div>
+</div>
+<div data-component="crn-form" id="crn-form-form-validacoes">
+    <div class="form" ng-show="validacoes.editing || validacoes.inserting">
+        <form crn-datasource="validacoes" class="">
+            <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting">
+                <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.startInserting()"><i class="glyphicon glyphicon-plus-sign"></i></button>
+                <button class="btn btn-success" data-component="crn-button" ng-click="datasource.startEditing()"><i class="glyphicon glyphicon-edit"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasPrevious()" ng-click="datasource.previous()"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasNext()" ng-click="datasource.next()"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.remove()"><i class="glyphicon glyphicon-trash"></i></button>
+            </div>
+            <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
+                <button class="btn btn-success" data-component="crn-button" ng-click="datasource.post()"><i class="glyphicon glyphicon-ok"></i></button>
+                <button class="btn btn-danger" data-component="crn-button" ng-click="datasource.cancel()"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+            <br>
+            <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
+
+                <div data-component="crn-textinput" id="crn-textinput-attribute_01" class="">
+                    <div class="form-group">
+                        <label for="textinput-attribute_01" class="">Attribute_01</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="time" ng-model="validacoes.active.attribute_01" class="form-control" id="textinput-attribute_01" placeholder="Attribute_01" mask="HH:mm" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-attribute_02" class="">
+                    <div class="form-group">
+                        <label for="textinput-attribute_02" class="">Attribute_02</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="datetime" ng-model="validacoes.active.attribute_02" class="form-control" id="textinput-attribute_02" placeholder="Attribute_02" mask="DD/MM/YYYY HH:mm:ss" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-attribute_03" class="">
+                    <div class="form-group">
+                        <label for="textinput-attribute_03" class="">Attribute_03</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="date" ng-model="validacoes.active.attribute_03" class="form-control" id="textinput-attribute_03" placeholder="Attribute_03" mask="DD/MM/YYYY" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-double_sem_mask" class="">
+                    <div class="form-group">
+                        <label for="textinput-double_sem_mask" class="">Double _sem _mask</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="number" ng-model="validacoes.active.double_sem_mask" class="form-control" id="textinput-double_sem_mask" placeholder="Double _sem _mask" mask="" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-doublemask" class="">
+                    <div class="form-group">
+                        <label for="textinput-doublemask" class="">Doublemask</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="number" ng-model="validacoes.active.doublemask" class="form-control" id="textinput-doublemask" placeholder="Doublemask" mask="#.##0,00;0" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-cpf" class="">
+                    <div class="form-group">
+                        <label for="textinput-cpf" class="">CPF</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="text" ng-model="validacoes.active.cpf" class="form-control" id="textinput-cpf" placeholder="CPF" mask="999.999.999-99;0" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-cnpj" class="">
+                    <div class="form-group">
+                        <label for="textinput-cnpj" class="">CNPJ</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="text" ng-model="validacoes.active.cnpj" class="form-control" id="textinput-cnpj" placeholder="CNPJ" mask="99.999.999/9999-99;0" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-cep" class="">
+                    <div class="form-group">
+                        <label for="textinput-cep" class="">CEP</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="text" ng-model="validacoes.active.cep" class="form-control" id="textinput-cep" placeholder="CEP" mask="99999-999;0" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-celular" class="">
+                    <div class="form-group">
+                        <label for="textinput-celular" class="">Celular</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="text" ng-model="validacoes.active.celular" class="form-control" id="textinput-celular" placeholder="Celular" mask="(99) 99999-9999;0" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-telefone" class="">
+                    <div class="form-group">
+                        <label for="textinput-telefone" class="">Telefone</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="text" ng-model="validacoes.active.telefone" class="form-control" id="textinput-telefone" placeholder="Telefone" mask="(99) 9999-9999;0" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-valor" class="">
+                    <div class="form-group">
+                        <label for="textinput-valor" class="">Valor</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="number" ng-model="validacoes.active.valor" class="form-control" id="textinput-valor" placeholder="Valor" mask="##0,00;0" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-valor2" class="">
+                    <div class="form-group">
+                        <label for="textinput-valor2" class="">Valor 2</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="number" ng-model="validacoes.active.valor2" class="form-control" id="textinput-valor2" placeholder="Valor 2" mask="##0,00;0" mask-placeholder="" ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+                <!-- NtoN  -->
+                <!-- NtoN  end-->
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <!-- OneToN -->
+                <!-- OneToOne  end -->
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+
+<!-- OneToOne modal -->
+<!-- OneToOne modal end-->
