@@ -11,7 +11,7 @@ import cronapi.rest.security.CronappSecurity;
 
 /**
  * Classe que representa a tabela TESTE
- * @generated Gerada alteração no GitHub
+ * @generated
  */
 @Entity
 @Table(name = "\"TESTE\"")
@@ -22,7 +22,7 @@ public class teste implements Serializable {
 
   /**
    * UID da classe, necessário na serialização
-   * @generated - Alterado para fazer pull na IDE - Teste Cron-108
+   * @generated
    */
   private static final long serialVersionUID = 1L;
 
