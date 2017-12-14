@@ -11,7 +11,7 @@ import cronapi.rest.security.CronappSecurity;
 
 /**
  * Classe que representa a tabela TESTE
- * @generated
+ * @generated Gerada alteração no GitHub
  */
 @Entity
 @Table(name = "\"TESTE\"")
