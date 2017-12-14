@@ -12,7 +12,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 /**
  * Classe que representa a tabela USER
- * @generated
+ * @generated dfg
  */
 @Entity
 @Table(name = "\"USER\"" ,uniqueConstraints=@UniqueConstraint(columnNames={
