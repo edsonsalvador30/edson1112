@@ -12,7 +12,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 /**
  * Classe que representa a tabela USER
- * @generated dfg
+ * @generated Alterando esse arquivo de forma simples para realizar
+ *  -------------------Commit---- Teste do CronApp-108
  */
 @Entity
 @Table(name = "\"USER\"" ,uniqueConstraints=@UniqueConstraint(columnNames={
