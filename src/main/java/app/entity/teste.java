@@ -22,7 +22,7 @@ public class teste implements Serializable {
 
   /**
    * UID da classe, necessário na serialização
-   * @generated
+   * @generated - Alterado para fazer pull na IDE - Teste Cron-108
    */
   private static final long serialVersionUID = 1L;
 
